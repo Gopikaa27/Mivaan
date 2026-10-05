@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,21 +11,24 @@
 
     :root {
       --bg: #fff9f5;
-      --panel: rgba(255,255,255,.72);
-      --panel-strong: rgba(255,255,255,.94);
+      --panel: rgba(255, 255, 255, .72);
+      --panel-strong: rgba(255, 255, 255, .94);
       --text: #44363a;
       --muted: #8f7c82;
       --accent: #c98291;
-      --accent-soft: rgba(201,130,145,.13);
-      --line: rgba(122,89,99,.14);
+      --accent-soft: rgba(201, 130, 145, .13);
+      --line: rgba(122, 89, 99, .14);
       --cream: #fffdfb;
       --lavender: #b8a6c9;
       --peach: #f2c8b5;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html, body {
+    html,
+    body {
       margin: 0;
       min-height: 100%;
       background: var(--bg);
@@ -41,10 +45,10 @@
       position: fixed;
       inset: -15%;
       background:
-        radial-gradient(circle at 12% 15%, rgba(242,200,181,.48), transparent 26%),
-        radial-gradient(circle at 88% 22%, rgba(184,166,201,.35), transparent 25%),
-        radial-gradient(circle at 65% 88%, rgba(249,220,204,.52), transparent 28%),
-        radial-gradient(circle at 25% 80%, rgba(232,205,220,.28), transparent 24%);
+        radial-gradient(circle at 12% 15%, rgba(242, 200, 181, .48), transparent 26%),
+        radial-gradient(circle at 88% 22%, rgba(184, 166, 201, .35), transparent 25%),
+        radial-gradient(circle at 65% 88%, rgba(249, 220, 204, .52), transparent 28%),
+        radial-gradient(circle at 25% 80%, rgba(232, 205, 220, .28), transparent 24%);
       pointer-events: none;
       filter: blur(30px);
     }
@@ -55,10 +59,10 @@
       pointer-events: none;
       opacity: .55;
       background-image:
-        radial-gradient(circle at 12% 20%, rgba(201,130,145,.28) 0 2px, transparent 2.5px),
-        radial-gradient(circle at 82% 18%, rgba(184,166,201,.30) 0 2px, transparent 2.5px),
-        radial-gradient(circle at 76% 78%, rgba(242,200,181,.32) 0 2px, transparent 2.5px),
-        radial-gradient(circle at 22% 84%, rgba(201,130,145,.20) 0 2px, transparent 2.5px);
+        radial-gradient(circle at 12% 20%, rgba(201, 130, 145, .28) 0 2px, transparent 2.5px),
+        radial-gradient(circle at 82% 18%, rgba(184, 166, 201, .30) 0 2px, transparent 2.5px),
+        radial-gradient(circle at 76% 78%, rgba(242, 200, 181, .32) 0 2px, transparent 2.5px),
+        radial-gradient(circle at 22% 84%, rgba(201, 130, 145, .20) 0 2px, transparent 2.5px);
       background-size: 320px 320px;
     }
 
@@ -80,11 +84,20 @@
       animation: enter .65s ease both;
     }
 
-    .screen.active { display: flex; }
+    .screen.active {
+      display: flex;
+    }
 
     @keyframes enter {
-      from { opacity: 0; transform: translateY(14px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .eyebrow {
@@ -96,7 +109,8 @@
       margin-bottom: 22px;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       margin: 0;
       line-height: 1.04;
       letter-spacing: -.035em;
@@ -127,7 +141,10 @@
       align-items: center;
     }
 
-    .hero-center .sub { margin-left: auto; margin-right: auto; }
+    .hero-center .sub {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     .quote {
       font-family: "Playfair Display", Georgia, serif;
@@ -142,7 +159,9 @@
       margin-top: 34px;
     }
 
-    .hero-center .button-row { justify-content: center; }
+    .hero-center .button-row {
+      justify-content: center;
+    }
 
     button {
       border: 0;
@@ -152,7 +171,9 @@
       transition: transform .2s ease, background .2s ease, border-color .2s ease;
     }
 
-    button:hover { transform: translateY(-2px); }
+    button:hover {
+      transform: translateY(-2px);
+    }
 
     .primary {
       padding: 14px 22px;
@@ -160,7 +181,7 @@
       background: var(--text);
       color: #fffaf7;
       font-weight: 700;
-      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .28);
     }
 
     .secondary {
@@ -192,18 +213,18 @@
       border-radius: 10px;
     }
 
-    .progress > div {
+    .progress>div {
       height: 100%;
       background: var(--accent);
       transition: width .35s ease;
     }
 
     .question-card {
-      background: linear-gradient(145deg, rgba(255,255,255,.90), rgba(255,250,247,.78));
-      border: 1px solid rgba(122,89,99,.12);
+      background: linear-gradient(145deg, rgba(255, 255, 255, .90), rgba(255, 250, 247, .78));
+      border: 1px solid rgba(122, 89, 99, .12);
       border-radius: 28px;
       padding: clamp(24px, 5vw, 46px);
-      box-shadow: 0 24px 70px rgba(133,91,104,.12);
+      box-shadow: 0 24px 70px rgba(133, 91, 104, .12);
       backdrop-filter: blur(16px);
     }
 
@@ -230,24 +251,25 @@
       text-align: left;
       padding: 16px 18px;
       border-radius: 17px;
-      background: rgba(255,255,255,.64);
+      background: rgba(255, 255, 255, .64);
       border: 1px solid var(--line);
       color: var(--text);
     }
 
     .option:hover {
       background: var(--panel-strong);
-      border-color: rgba(217,183,122,.4);
+      border-color: rgba(217, 183, 122, .4);
     }
 
     .option.selected {
       background: var(--accent-soft);
-      border-color: rgba(201,130,145,.60);
+      border-color: rgba(201, 130, 145, .60);
     }
 
-    textarea, input {
+    textarea,
+    input {
       width: 100%;
-      background: rgba(255,255,255,.72);
+      background: rgba(255, 255, 255, .72);
       color: var(--text);
       border: 1px solid var(--line);
       border-radius: 17px;
@@ -261,9 +283,10 @@
       min-height: 140px;
     }
 
-    textarea:focus, input:focus {
-      border-color: rgba(201,130,145,.65);
-      box-shadow: 0 0 0 4px rgba(201,130,145,.08);
+    textarea:focus,
+    input:focus {
+      border-color: rgba(201, 130, 145, .65);
+      box-shadow: 0 0 0 4px rgba(201, 130, 145, .08);
     }
 
     .intermission {
@@ -295,17 +318,17 @@
       display: grid;
       place-items: center;
       border-radius: 50%;
-      border: 1px solid rgba(201,130,145,.48);
+      border: 1px solid rgba(201, 130, 145, .48);
       color: var(--accent);
       font-size: 28px;
       margin-bottom: 26px;
-      box-shadow: 0 0 50px rgba(201,130,145,.12);
+      box-shadow: 0 0 50px rgba(201, 130, 145, .12);
     }
 
     .letter {
       text-align: left;
       margin-top: 28px;
-      background: rgba(255,255,255,.66);
+      background: rgba(255, 255, 255, .66);
       border: 1px solid var(--line);
       border-radius: 26px;
       padding: clamp(26px, 5vw, 48px);
@@ -332,15 +355,26 @@
       text-align: center;
     }
 
-    .hidden { display: none !important; }
+    .hidden {
+      display: none !important;
+    }
 
     @media (max-width: 600px) {
-      .app { padding: 18px; }
-      .screen { min-height: 580px; }
-      .question-card { border-radius: 22px; }
+      .app {
+        padding: 18px;
+      }
+
+      .screen {
+        min-height: 580px;
+      }
+
+      .question-card {
+        border-radius: 22px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="stars"></div>
 
@@ -367,7 +401,9 @@
           <span id="questionNumber">Question 01 / 12</span>
           <span>Friendship test</span>
         </div>
-        <div class="progress"><div id="progressBar" style="width: 8.33%"></div></div>
+        <div class="progress">
+          <div id="progressBar" style="width: 8.33%"></div>
+        </div>
       </div>
 
       <div class="question-card">
@@ -456,312 +492,331 @@
     </section>
   </main>
 
-<script>
-  /*
-    OPTIONAL ANSWER COLLECTION:
-    Later, set this to your deployed Google Apps Script web-app URL.
-    Until then, answers are stored locally in the browser.
-  */
-  const ANSWER_ENDPOINT = "";
+  <script>
+    /*
+      PRIVATE ANSWER COLLECTION:
+      Configure ANSWER_ENDPOINT and SUBMISSION_TOKEN below after deploying
+      the Google Apps Script backend.
+  
+      OPTIONAL ANSWER COLLECTION:
+      Later, set this to your deployed Google Apps Script web-app URL.
+      Until then, answers are stored locally in the browser.
+    */
+    const ANSWER_ENDPOINT = "https://script.google.com/macros/s/AKfycbwId3u0nmAa1Rj5fg6cIok77_XhvG-K23h_aH_bQTSjbXBb_6ja7vXYpzY18eDz2EaX/exec";
+    const SUBMISSION_TOKEN = "GabbuGunnu-2026-bday";
 
-  const questions = [
-    {
-      type: "text",
-      question: "Where did Gopika and Aniket meet for the very first time?",
-      before: "Let's test that memory 🧠",
-      hint: "29 years of life… surely this friendship detail is still safely stored. 👀"
-    },
-    {
-      type: "choice",
-      question: "If there was a singing concert with ONLY Aniket and Gopika, what would they probably start singing first? 🎤",
-      before: "The imaginary concert",
-      options: [
-        "The song we always end up singing 🎶",
-        "Something completely random 😂",
-        "A song only the two of us would understand 👀",
-        "We'd argue about the song for 20 minutes first 😭"
-      ]
-    },
-    {
-      type: "text",
-      question: "Be honest… what was your FIRST thought when you saw Gopika?",
-      before: "Let's revisit history 👀",
-      hint: "Choose your words wisely. Gopika has a very good memory when it comes to things like this. 😌"
-    },
-    {
-      type: "text",
-      question: "What have you become completely habituated to whenever Gopika is on a call with you? 📞",
-      before: "The Gopika call survival test",
-      hint: "Think carefully… what is one thing you now automatically expect on a Gopika call? 😂"
-    },
-    {
-      type: "text",
-      question: "Mention ONE person Gopika gets most irritated with when it comes to you. 😈",
-      before: "Dangerous territory",
-      hint: "There is definitely a name in your head right now. Don't pretend there isn't. 👀"
-    },
-    {
-      type: "choice",
-      question: "Who is more jealous in this friendship — Aniket or Gopika? 👀",
-      before: "The jealousy department",
-      options: [
-        "Definitely Aniket 😌",
-        "Definitely Gopika 👀",
-        "Both of them 😂",
-        "Neither — they are perfectly mature adults 🤡"
-      ]
-    },
-    {
-      type: "choice",
-      question: "What is Gopika's most dangerous weapon when she's angry with Aniket? 😌",
-      before: "A question of survival",
-      options: [
-        "Complete silence",
-        "Sarcasm with a smile 🙂",
-        "The legendary “Okay.”",
-        "That look that somehow works even over a phone call 💀"
-      ]
-    },
-    {
-      type: "choice",
-      question: "What does “I'll tell you one last thing…” actually mean when Gopika says it?",
-      before: "The one-last-thing trap 📺",
-      options: [
-        "The conversation is genuinely ending",
-        "Okay, maybe another 5 minutes",
-        "Definitely another 30 minutes",
-        "Congratulations — you've unlocked Season 2 😂"
-      ]
-    },
-    {
-      type: "choice",
-      question: "When Aniket and Gopika argue, who usually wins? 🥊",
-      before: "The friendship championship",
-      options: [
-        "Aniket, obviously 😎",
-        "Gopika, obviously 😌",
-        "Whoever refuses to give up first 😂",
-        "Nobody… but somehow Gopika still announces victory 😭"
-      ]
-    },
-    {
-      type: "text",
-      question: "What is ONE thing Aniket should NEVER say to Gopika if he wants to remain at peace? 🧨",
-      before: "The forbidden sentence",
-      hint: "One sentence. One chance. Think like your life depends on it. 🫡"
-    },
-    {
-      type: "choice",
-      question: "If Aniket and Gopika were locked in a room together for 24 hours, what would happen first? 🔒",
-      before: "The highly scientific experiment",
-      options: [
-        "A surprisingly serious conversation",
-        "An argument over something completely unnecessary 😂",
-        "Gossip about everyone we know",
-        "Laughing at something that isn't even funny",
-        "All four within the first 30 minutes 😭"
-      ]
-    },
-    {
-      type: "text",
-      question: "After everything we've laughed about, argued about, annoyed each other with and talked about… what is ONE thing about our friendship you think will never change? ❤️",
-      before: "Okay… one actually serious question",
-      hint: "No jokes for this one. Take your time. 🥹"
-    }
-  ];
-
-  let current = 0;
-  let answers = [];
-  let attemptStartedAt = null;
-  let selectedAnswer = null;
-
-  const $ = id => document.getElementById(id);
-
-  function showScreen(id) {
-    document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
-    $(id).classList.add("active");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
-  function startQuiz() {
-    current = 0;
-    answers = [];
-    selectedAnswer = null;
-    attemptStartedAt = new Date().toISOString();
-    showScreen("quiz");
-    renderQuestion();
-  }
-
-  function renderQuestion() {
-    const q = questions[current];
-    $("questionNumber").textContent = `Question ${String(current + 1).padStart(2, "0")} / ${questions.length}`;
-    $("progressBar").style.width = `${((current + 1) / questions.length) * 100}%`;
-    $("beforeText").textContent = q.before;
-    $("questionText").textContent = q.question;
-    $("hintText").textContent = q.hint || "";
-    $("hintText").classList.toggle("hidden", !q.hint);
-    selectedAnswer = null;
-
-    const area = $("answerArea");
-    area.innerHTML = "";
-
-    if (q.type === "text") {
-      const ta = document.createElement("textarea");
-      ta.id = "textAnswer";
-      ta.placeholder = "Type your answer here…";
-      area.appendChild(ta);
-      setTimeout(() => ta.focus(), 150);
-    } else {
-      const wrap = document.createElement("div");
-      wrap.className = "options";
-      q.options.forEach(opt => {
-        const btn = document.createElement("button");
-        btn.className = "option";
-        btn.textContent = opt;
-        btn.onclick = () => {
-          selectedAnswer = opt;
-          wrap.querySelectorAll(".option").forEach(b => b.classList.remove("selected"));
-          btn.classList.add("selected");
-        };
-        wrap.appendChild(btn);
-      });
-      area.appendChild(wrap);
-    }
-  }
-
-  function submitAnswer() {
-    const q = questions[current];
-    let answer = "";
-
-    if (q.type === "text") {
-      answer = $("textAnswer").value.trim();
-      if (!answer) {
-        $("textAnswer").focus();
-        return;
+    const questions = [
+      {
+        type: "text",
+        question: "Where did Gopika and Aniket meet for the very first time?",
+        before: "Let's test that memory 🧠",
+        hint: "29 years of life… surely this friendship detail is still safely stored. 👀"
+      },
+      {
+        type: "choice",
+        question: "If there was a singing concert with ONLY Aniket and Gopika, what would they probably start singing first? 🎤",
+        before: "The imaginary concert",
+        options: [
+          "The song we always end up singing 🎶",
+          "Something completely random 😂",
+          "A song only the two of us would understand 👀",
+          "We'd argue about the song for 20 minutes first 😭"
+        ]
+      },
+      {
+        type: "text",
+        question: "Be honest… what was your FIRST thought when you saw Gopika?",
+        before: "Let's revisit history 👀",
+        hint: "Choose your words wisely. Gopika has a very good memory when it comes to things like this. 😌"
+      },
+      {
+        type: "text",
+        question: "What have you become completely habituated to whenever Gopika is on a call with you? 📞",
+        before: "The Gopika call survival test",
+        hint: "Think carefully… what is one thing you now automatically expect on a Gopika call? 😂"
+      },
+      {
+        type: "text",
+        question: "Mention ONE person Gopika gets most irritated with when it comes to you. 😈",
+        before: "Dangerous territory",
+        hint: "There is definitely a name in your head right now. Don't pretend there isn't. 👀"
+      },
+      {
+        type: "choice",
+        question: "Who is more jealous in this friendship — Aniket or Gopika? 👀",
+        before: "The jealousy department",
+        options: [
+          "Definitely Aniket 😌",
+          "Definitely Gopika 👀",
+          "Both of them 😂",
+          "Neither — they are perfectly mature adults 🤡"
+        ]
+      },
+      {
+        type: "choice",
+        question: "What is Gopika's most dangerous weapon when she's angry with Aniket? 😌",
+        before: "A question of survival",
+        options: [
+          "Complete silence",
+          "Sarcasm with a smile 🙂",
+          "The legendary “Okay.”",
+          "That look that somehow works even over a phone call 💀"
+        ]
+      },
+      {
+        type: "choice",
+        question: "What does “I'll tell you one last thing…” actually mean when Gopika says it?",
+        before: "The one-last-thing trap 📺",
+        options: [
+          "The conversation is genuinely ending",
+          "Okay, maybe another 5 minutes",
+          "Definitely another 30 minutes",
+          "Congratulations — you've unlocked Season 2 😂"
+        ]
+      },
+      {
+        type: "choice",
+        question: "When Aniket and Gopika argue, who usually wins? 🥊",
+        before: "The friendship championship",
+        options: [
+          "Aniket, obviously 😎",
+          "Gopika, obviously 😌",
+          "Whoever refuses to give up first 😂",
+          "Nobody… but somehow Gopika still announces victory 😭"
+        ]
+      },
+      {
+        type: "text",
+        question: "What is ONE thing Aniket should NEVER say to Gopika if he wants to remain at peace? 🧨",
+        before: "The forbidden sentence",
+        hint: "One sentence. One chance. Think like your life depends on it. 🫡"
+      },
+      {
+        type: "choice",
+        question: "If Aniket and Gopika were locked in a room together for 24 hours, what would happen first? 🔒",
+        before: "The highly scientific experiment",
+        options: [
+          "A surprisingly serious conversation",
+          "An argument over something completely unnecessary 😂",
+          "Gossip about everyone we know",
+          "Laughing at something that isn't even funny",
+          "All four within the first 30 minutes 😭"
+        ]
+      },
+      {
+        type: "text",
+        question: "After everything we've laughed about, argued about, annoyed each other with and talked about… what is ONE thing about our friendship you think will never change? ❤️",
+        before: "Okay… one actually serious question",
+        hint: "No jokes for this one. Take your time. 🥹"
       }
-    } else {
-      answer = selectedAnswer;
-      if (!answer) return;
-    }
-
-    answers.push({
-      questionNumber: current + 1,
-      question: q.question,
-      answer
-    });
-
-    if (current === questions.length - 1) {
-      showIntermission(
-        "Okay… I think that's enough evidence. 👀",
-        "One final question. And this one actually matters. ❤️",
-        () => showScreen("finalGate")
-      );
-      return;
-    }
-
-    const messages = [
-      ["Hmm… interesting. 👀", "Gopika has quietly filed that answer in the friendship records."],
-      ["Noted, Aniket ji. 😌", "Let's see if the next question exposes you a little more."],
-      ["Ohhh… okay. 😂", "That answer definitely tells me you've been paying attention."],
-      ["Very interesting choice. 👀", "Don't worry — I'm not judging. Yet."],
-      ["Okay, moving on… 😌", "You still have several opportunities to incriminate yourself."],
-      ["I see how this is going. 😂", "Let's continue before you change your answer."],
-      ["Saved. 🫡", "Your friendship history is becoming a surprisingly detailed case file."]
     ];
-    const m = messages[current % messages.length];
-    showIntermission(m[0], m[1], () => {
-      current++;
+
+    let current = 0;
+    let answers = [];
+    let attemptStartedAt = null;
+    let selectedAnswer = null;
+
+    const $ = id => document.getElementById(id);
+
+    function showScreen(id) {
+      document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+      $(id).classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function startQuiz() {
+      current = 0;
+      answers = [];
+      selectedAnswer = null;
+      attemptStartedAt = new Date().toISOString();
       showScreen("quiz");
       renderQuestion();
-    });
-  }
-
-  let pendingContinue = null;
-
-  function showIntermission(title, sub, nextFn) {
-    $("intermissionText").textContent = title;
-    $("intermissionSub").textContent = sub;
-    pendingContinue = nextFn;
-    showScreen("intermission");
-  }
-
-  function continueQuiz() {
-    if (pendingContinue) pendingContinue();
-  }
-
-  async function finishQuiz(finalAnswer) {
-    answers.push({
-      questionNumber: "FINAL",
-      question: "Would you still choose Gopika as your best friend?",
-      answer: finalAnswer
-    });
-
-    const attempt = {
-      attemptStartedAt,
-      completedAt: new Date().toISOString(),
-      answers
-    };
-
-    saveAttemptLocally(attempt);
-    await sendAttempt(attempt);
-
-    const count = getAttempts().length;
-    $("attemptInfo").textContent = `Attempt ${count} saved • Your answers are safely with Gopika.`;
-    showScreen("reveal");
-  }
-
-  function saveAttemptLocally(attempt) {
-    const attempts = getAttempts();
-    attempts.push(attempt);
-    localStorage.setItem("aniketBirthdayAttempts", JSON.stringify(attempts));
-    localStorage.setItem("aniketQuizCompleted", "true");
-  }
-
-  function getAttempts() {
-    try {
-      return JSON.parse(localStorage.getItem("aniketBirthdayAttempts") || "[]");
-    } catch {
-      return [];
     }
-  }
 
-  async function sendAttempt(attempt) {
-    if (!ANSWER_ENDPOINT) return;
+    function renderQuestion() {
+      const q = questions[current];
+      $("questionNumber").textContent = `Question ${String(current + 1).padStart(2, "0")} / ${questions.length}`;
+      $("progressBar").style.width = `${((current + 1) / questions.length) * 100}%`;
+      $("beforeText").textContent = q.before;
+      $("questionText").textContent = q.question;
+      $("hintText").textContent = q.hint || "";
+      $("hintText").classList.toggle("hidden", !q.hint);
+      selectedAnswer = null;
 
-    try {
-      await fetch(ANSWER_ENDPOINT, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify(attempt)
+      const area = $("answerArea");
+      area.innerHTML = "";
+
+      if (q.type === "text") {
+        const ta = document.createElement("textarea");
+        ta.id = "textAnswer";
+        ta.placeholder = "Type your answer here…";
+        area.appendChild(ta);
+        setTimeout(() => ta.focus(), 150);
+      } else {
+        const wrap = document.createElement("div");
+        wrap.className = "options";
+        q.options.forEach(opt => {
+          const btn = document.createElement("button");
+          btn.className = "option";
+          btn.textContent = opt;
+          btn.onclick = () => {
+            selectedAnswer = opt;
+            wrap.querySelectorAll(".option").forEach(b => b.classList.remove("selected"));
+            btn.classList.add("selected");
+          };
+          wrap.appendChild(btn);
+        });
+        area.appendChild(wrap);
+      }
+    }
+
+    function submitAnswer() {
+      const q = questions[current];
+      let answer = "";
+
+      if (q.type === "text") {
+        answer = $("textAnswer").value.trim();
+        if (!answer) {
+          $("textAnswer").focus();
+          return;
+        }
+      } else {
+        answer = selectedAnswer;
+        if (!answer) return;
+      }
+
+      answers.push({
+        questionNumber: current + 1,
+        question: q.question,
+        answer
       });
-    } catch (e) {
-      console.log("Answer endpoint unavailable; local copy retained.");
+
+      if (current === questions.length - 1) {
+        showIntermission(
+          "Okay… I think that's enough evidence. 👀",
+          "One final question. And this one actually matters. ❤️",
+          () => showScreen("finalGate")
+        );
+        return;
+      }
+
+      const messages = [
+        ["Hmm… interesting. 👀", "Gopika has quietly filed that answer in the friendship records."],
+        ["Noted, Aniket ji. 😌", "Let's see if the next question exposes you a little more."],
+        ["Ohhh… okay. 😂", "That answer definitely tells me you've been paying attention."],
+        ["Very interesting choice. 👀", "Don't worry — I'm not judging. Yet."],
+        ["Okay, moving on… 😌", "You still have several opportunities to incriminate yourself."],
+        ["I see how this is going. 😂", "Let's continue before you change your answer."],
+        ["Saved. 🫡", "Your friendship history is becoming a surprisingly detailed case file."]
+      ];
+      const m = messages[current % messages.length];
+      showIntermission(m[0], m[1], () => {
+        current++;
+        showScreen("quiz");
+        renderQuestion();
+      });
     }
-  }
 
-  function showMessage() {
-    showScreen("message");
-  }
+    let pendingContinue = null;
 
-  function retakeQuiz() {
-    startQuiz();
-  }
+    function showIntermission(title, sub, nextFn) {
+      $("intermissionText").textContent = title;
+      $("intermissionSub").textContent = sub;
+      pendingContinue = nextFn;
+      showScreen("intermission");
+    }
 
-  // If he has already completed the quiz on this browser,
-  // show the message/re-entry screen instead of forcing a re-answer.
-  window.addEventListener("DOMContentLoaded", () => {
-    if (localStorage.getItem("aniketQuizCompleted") === "true") {
-      $("intro").querySelector(".sub").innerHTML =
-        "You've already survived the friendship test. 😌<br><br>" +
-        "You can go straight to the birthday message — or, if you're brave enough, take the quiz again.";
-      const row = $("intro").querySelector(".button-row");
-      row.innerHTML = `
+    function continueQuiz() {
+      if (pendingContinue) pendingContinue();
+    }
+
+    async function finishQuiz(finalAnswer) {
+      answers.push({
+        questionNumber: "FINAL",
+        question: "Would you still choose Gopika as your best friend?",
+        answer: finalAnswer
+      });
+
+      const attempt = {
+        attemptStartedAt,
+        completedAt: new Date().toISOString(),
+        answers
+      };
+
+      saveAttemptLocally(attempt);
+      await sendAttempt(attempt);
+
+      const count = getAttempts().length;
+      $("attemptInfo").textContent = `Attempt ${count} saved • Your answers are safely with Gopika.`;
+      showScreen("reveal");
+    }
+
+    function saveAttemptLocally(attempt) {
+      const attempts = getAttempts();
+      attempts.push(attempt);
+      localStorage.setItem("aniketBirthdayAttempts", JSON.stringify(attempts));
+      localStorage.setItem("aniketQuizCompleted", "true");
+    }
+
+    function getAttempts() {
+      try {
+        return JSON.parse(localStorage.getItem("aniketBirthdayAttempts") || "[]");
+      } catch {
+        return [];
+      }
+    }
+
+    async function sendAttempt(attempt) {
+      if (
+        !ANSWER_ENDPOINT ||
+        ANSWER_ENDPOINT.includes("PASTE_YOUR_APPS_SCRIPT") ||
+        !SUBMISSION_TOKEN ||
+        SUBMISSION_TOKEN.includes("PASTE_YOUR_SECRET")
+      ) {
+        console.log("Backend endpoint/token not configured; local copy retained.");
+        return;
+      }
+
+      try {
+        const payload = {
+          token: SUBMISSION_TOKEN,
+          ...attempt
+        };
+
+        await fetch(ANSWER_ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        });
+      } catch (e) {
+        console.log("Answer endpoint unavailable; local copy retained.", e);
+      }
+    }
+
+    function showMessage() {
+      showScreen("message");
+    }
+
+    function retakeQuiz() {
+      startQuiz();
+    }
+
+    // If he has already completed the quiz on this browser,
+    // show the message/re-entry screen instead of forcing a re-answer.
+    window.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("aniketQuizCompleted") === "true") {
+        $("intro").querySelector(".sub").innerHTML =
+          "You've already survived the friendship test. 😌<br><br>" +
+          "You can go straight to the birthday message — or, if you're brave enough, take the quiz again.";
+        const row = $("intro").querySelector(".button-row");
+        row.innerHTML = `
         <button class="primary" onclick="showMessage()">Read my birthday message →</button>
         <button class="secondary" onclick="startQuiz()">Retake the quiz</button>
       `;
-    }
-  });
-</script>
+      }
+    });
+  </script>
 </body>
+
 </html>
